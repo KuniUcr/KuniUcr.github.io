@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway:wght@300;400;700&display=swap');
+
+:root{ /*Defino variables*/
+    --background: linear-gradient(135deg, #02505985 0%, #2ea6906c 100%);
+    --color-primary:#000000;
+    --color-secondary: #025159;
+    --boton-padding: 20px 40px;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+img{transition: 0.7s;}
+
+img:hover{
+    transform: scale(1.7);
+    transition: 0.7s;
+}
+
+
+.container{ /*Medida de los contenedores*/
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+
+
+}
+
+.subtitle{ /*Color y margenes de los subtitulos*/
+    color: var(--color-primary);
+    font-size: 1.9rem;
+    margin-bottom: 35px;
+    
+
+}
+
+.subtitle__title{
+    color: #2ea690;
+    font-size: 2.3rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.subtitle__titlesss{
+    color: #000000;
+    font-size: 2.3rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.subtitle__projects{
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+
+.subtitle__name{
+    color:#F29B30;
+    font-size: 3.5rem;
+    margin-bottom: 35px;
+}
+
+.subtitle__testimony{
+    color: #F29B30;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    text-align:center;
+}
+
+.hero{ /*Esto es la imagen del fondo*/
+    height: 100vh;
+    background-image: var(--background), url('../assets/paisaje.jpg');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.hero.container{ /*Se le quita el espacio al principio de los textos de los contenedores*/
+    padding: 0;
+}
+
+.nav{ /*Se define la posicion de los botontes de arriba*/
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 70px;
+    font-weight: 700;
+}
+
+.nav__logo{
+    height: 100px;
+    width: 110px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+
+.nav__items{ /**/
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+    justify-content: right;
+}
+
+.nav__items--cta{ /*Esto es para los botones de arriba*/
+    border: 1px solid #fff ;
+}
+
+.nav__items--footer{ /*Esto es para la posicion de los botones de arriba*/
+    padding: 10px;
+}
+
+.hero__container{ /*Para la wave, que es lo que estoy utilizando para el efecto de movimiento al principio con la imagen de sherk*/
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: #fff;
+
+}
+
+.hero__texts{ /*Para que se centre el texto*/
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.hero__title{ /*Posicion de los textos*/
+    margin-bottom: 40px;
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.hero__subtitle{ /*Posicion de los subtitulos*/
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.hero__cta{
+    display: inline-block;
+    background: #fff;
+    padding: var(--boton-padding);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 40px;
+
+}
+
+.hero__wave{ /*Esto le da la posicion correcta*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+/*Siguiente parte, about*/
+
+.presentation{
+    padding-top:0 ;
+    text-align: center;
+}
+
+.presentation__picture{ /*Para la foto circular, los valores varian segun lo que quiera*/
+    width: 500px;
+    height: 500px;
+    border-radius: 20%;
+    margin-bottom: 10px;
+    object-fit:scale-down;
+    object-position: center;
+
+}
+
+.presentation__pictures{ /*los valores varian segun lo que quiera*/
+    width: 350px;
+    height: 350px;
+    border-radius:  50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    object-fit:scale-down;
+    object-position: center;
+}
+
+.presentation__copy{/*Posicion del texto*/
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.presentation__cta{ /* Esto es el boton central*/
+    display: inline-block;
+    margin-top: 30px;
+    background: #F29B30;
+    text-decoration: none;
+    padding: var(--boton-padding);
+    border-radius: 40px;
+}
+
+.about{ /*Posicion de la informacion*/
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about__img{ /*Se centra la imagen*/
+    text-align: center;
+
+}
+
+.about__img--left{ /*Se coloca la imagen centra a la izquierda*/
+    text-align: left;
+}
+
+.about_picture{ /*Se le da un tamaño a llenar especifico*/
+    max-width: 80%;
+}
+
+.about__paragraph{ /*Parametros del llenado*/
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: justify;
+    font-size: 1.2rem;
+
+}
+
+/*Projects: Es el nombre que le di a esa parte del codigo que uso de prueba*/
+
+.projects{
+    background: #f2f2f2;
+
+}
+
+.projects__grid{ /*se define la info de la imagenes*/
+    display: grid;
+    height: 370px;
+    grid-template-areas: 
+    "img1 img2 img3";
+    gap: 30px;
+}
+
+.projects__grid__eco{
+    display: grid;
+    height: 300px;
+    grid-template-areas: 
+    "img1 img1"
+    "img1 img1";
+    gap: 30px;
+}
+
+.projects__item{ /*Posicion de las imagenes*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.projects__img{
+    width: 100%; /*tamaño de las imagenes*/
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+
+.projects__item:nth-of-type(1){ /*Se coloca la img 1*/
+    grid-area: img1;
+}
+
+.projects__item:nth-of-type(2){/*Se coloca la img 2*/
+    grid-area: img2;
+}
+
+.projects__item:nth-of-type(3){/*Se coloca la img 3*/
+    grid-area: img3;
+}
+
+.projects__hover{ /*Esto es un efecto, nada mas*/
+    position: absolute;
+    background: #3084f213;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+
+}
+
+.projects__item:hover .projects__hover{ /*Una transicion de efecto*/
+    transform: translateX(0%);
+}
+
+.projects__icon{ /*Margenes de seleccion del efecto*/
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.projects__icon{ /*Margenes de seleccion del efecto*/
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+/*Testimony*/
+.testimony__grid{ /*Separacion de la caja grid*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*Esto referencia la cantidad de imagenes que hay*/
+    gap: 20px;
+}
+
+.testimony__item{ /*Se define los espacios de informacion*/
+    width: 95%;
+    margin: 0 auto;
+    background: var(--color-secondary);
+    box-shadow: 0 8px 10px rgba(66, 66, 66, .5);
+    border-radius: 7px;
+    padding: 30px 25px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.testimony__item__projects{
+    width: 95%;
+    margin: 0 auto;
+    background: #c57e27;
+    box-shadow: 0 8px 4px rgba(66, 66, 66, .5);
+    border-radius: 7px;
+    padding: 30px 25px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.testimony__person{ /*Se centra la informarcion */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimony__review__products{
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.testimony__img{ /*Se coloca las imagenes y se les da una posicion correcta*/
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 30px;
+}
+
+.testimony__name{ /*Se edita el fonfo y los margenes*/
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.testimony__name__projects{ /*Se edita el fonfo y los margenes*/
+    font-size: 2.9rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.testimony__verification{ /*Fondo y datos del usuario, se refiere a la posicion*/
+    color: #d6cbd5;
+    font-weight: 700;
+}
+
+.testimony__review{/*La informacion*/
+    font-weight: 300;
+}
+
+ /*Footer*/ /*Esto lo pueden ignorar, solo queria probrar conexiones y iconos de internet*/
+.footer{
+    background: var(--color-primary);
+
+}
+
+.container_footer__grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer__title{
+    font-weight: 400;
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__container-icons{
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+    line-height: 60px;
+    
+
+}
+
+.footer__icon{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: bottom;
+
+}
+
+.icon-text{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.fa-brands.footer__icon{
+    line-height: 60px;
+}
+
+.fa-regular.footer__icon{
+    line-height: 60px;
+}
+
+.projects__tittle__text {
+    color: #F29B30;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.abouts {
+    display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  }
+  
+  .column {
+    flex-basis: calc(50% - 20px);
+  }
+  
+  .centered-container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container__group {
+    margin-bottom: 20px;
+  }
+  
+  .projects__tittle__text {
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .text__heroe {
+    width: 300px;
+    height: auto;
+    background: #025159;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+  }
+
+
+.text__heroe:focus::before {
+    width: 100%;
+}
+
+
+/*Capacidad de funcionar en celular*/
+
+@media screen and (max-width: 800px) {
+    :root{
+        --boton-padding: 18px 40px;
+    }
+
+    .nav{
+        justify-content: space-around;
+    }
+
+    .nav__items--cta{
+        border: none;
+    }
+
+    .nav__items{
+        font-weight: 400;
+        border-bottom: 1px solid #fff;
+        margin-right: 0;
+    }
+
+    
+
+    .nav__items--footer{
+        border: none;
+    }
+
+    .hero__texts{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .hero__title{
+        font-size: 2.5rem;
+    }
+
+    .hero__subtitle{
+        font-size: 1.5rem;
+    }
+
+    /* About */
+
+    .presentation__copy{
+        width: 100%;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .about.container{
+        padding-top: 30px;
+    }
+
+    .about__img--left{
+        text-align: center;
+    }
+
+    .about_texts:last-child{
+        grid-row: 3/4;
+    }
+
+    /*My projects*/
+
+    .projects__grid{
+        grid-template-columns:
+        "img1 img1 img2 img2"
+        "img1 img1 img3 img3"
+        "img4 img4 img5 img5";
+    }
+
+    /*Teztimony*/
+
+    .testimony__grid{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .projects__img{
+        padding: 30px, 15px;
+    }
+    /*Footer*/
+
+    .footer__grid{
+       grid-template-columns: 1fr; 
+    }
+
+    .footer__contact{
+        grid-row: 1/2;
+    }
+
+
+}
+
+@media screen and (max-width: 500px){
+    :rott{
+        --boton-padding: 18px 35px;
+    };
+
+    .subtitle{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+
+    .nav__items{
+        padding: 0 10px;
+        border: 0;
+    }
+
+    .hero__texts{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    /*about*/
+
+    .presentation__picture{
+        width: 120px;
+        height: 120px;
+    }
+
+    .about{
+        row-gap: 60px;
+    }
+
+    .about.container{
+        padding-top: 10px;
+    }
+
+    /*My projects*/
+
+    .projects__grid{
+        grid-template-areas:
+         "img1"
+         "img2"
+         "img3"
+         "img4"
+         "img5";
+         height: auto;
+         grid-template-rows: repeat(5, 250px);
+         grid-auto-rows: 250px;
+         gap: 10px;
+    }
+
+    .projects__img{
+        padding: 30px, 15px;
+    }
+
+    /*testimony*/
+
+    .testimony__item{
+        padding: 30px, 15px;
+
+    }
+    .testimony__person{
+        flex-direction: column;
+    }
+
+    .testimony__texs{
+        text-align: center;
+    }
+
+    .testimony__img{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
